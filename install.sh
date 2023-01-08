@@ -8,6 +8,7 @@
 script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 echo "EmonHub directory: $script_dir"
+user=$USER
 
 # User input: check username to install emonhub with
 echo "Running apt update"
