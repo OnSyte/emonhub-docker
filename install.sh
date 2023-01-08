@@ -15,10 +15,6 @@ apt update
 
 echo "installing or updating emonhub dependencies"
 apt-get install -y python3-serial python3-configobj python3-pip python3-pymodbus bluetooth libbluetooth-dev python3-spidev
-pip3 install paho-mqtt requests pybluez py-sds011 sdm_modbus minimalmodbus
-
-# Custom rpi-rfm69 library used for SPI RFM69 Low Power Labs interfacer
-pip3 install https://github.com/openenergymonitor/rpi-rfm69/archive/refs/tags/v0.3.0-oem-4.zip
 
 # this should not be needed on main user but could be re-enabled
 # useradd -M -r -G dialout,tty -c "emonHub user" emonhub
