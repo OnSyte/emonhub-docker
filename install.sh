@@ -25,9 +25,15 @@ apt-get install -y python3-serial python3-configobj python3-pip python3-pymodbus
 if [ ! -d /etc/emonhub ]; then
     echo "Creating /etc/emonhub directory"
     mkdir /etc/emonhub
-    mkdir -p /var/log/emonhub
 else
     echo "/etc/emonhub directory already exists"
+fi
+
+if [ ! -d /var/log/emonhub ]; then
+    echo "Creating /var/log/emonhub directory"
+    mkdir -p /var/log/emonhub
+else
+    echo "/var/log/emonhub directory already exists"
 fi
 
 if [ ! -f /etc/emonhub/emonhub.conf ]; then
